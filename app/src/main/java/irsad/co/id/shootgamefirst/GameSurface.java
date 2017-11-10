@@ -31,7 +31,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
     }
     @Override
     public void surfaceCreated(SurfaceHolder holder){
-        Bitmap chibiBitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.chibi1);
+        Bitmap chibiBitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.chibi2);
         this.chibi1 = new Character(this,chibiBitmap,100,50);
 
         this.gameThread = new GameThread(this,holder);

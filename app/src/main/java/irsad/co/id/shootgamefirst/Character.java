@@ -34,6 +34,7 @@ public class Character extends GameObject{
         super(image,4,3,x,y);
 
         this.gameSurface = gameSurface;
+
         this.topToButtoms = new Bitmap[colCount];
         this.leftToRights = new Bitmap[colCount];
         this.rightToLefts = new Bitmap[colCount];
