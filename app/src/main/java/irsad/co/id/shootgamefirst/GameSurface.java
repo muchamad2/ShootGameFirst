@@ -63,7 +63,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
             int y = (int)event.getY();
 
             int movingVectorX = x-this.chibi1.getX();
-            int movingVectorY = t-this.chibi1.getY();
+            int movingVectorY = y-this.chibi1.getY();
 
             this.chibi1.setMovingVector(movingVectorX,movingVectorY);
             return true;

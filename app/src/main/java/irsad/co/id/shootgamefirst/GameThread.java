@@ -6,7 +6,7 @@ package irsad.co.id.shootgamefirst;
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
 import android.view.View;
-
+import java.lang.*;
 public class GameThread extends Thread{
     private boolean running;
     private GameSurface gameSurface;
@@ -27,9 +27,8 @@ public class GameThread extends Thread{
                     this.gameSurface.update();
                     this.gameSurface.draw(canvas);
                 }
-            } catch (InterruptedException ie) {
-
-            } finally {
+            }
+            finally {
                 if (canvas != null) {
                     this.surfaceHolder.unlockCanvasAndPost(canvas);
                 }
@@ -43,7 +42,7 @@ public class GameThread extends Thread{
             System.out.print("Wait time = " + waitTime);
             try {
                 this.sleep(waitTime);
-            } catch (InterruptedException e) {
+            } catch (Exception e) {
 
             }
             startTime = System.nanoTime();
